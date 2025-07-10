@@ -1,0 +1,5 @@
+#!/bin/bash
+# Print the third line of the file iacta in the current directory
+
+# Using head and tail commands to extract line 3
+head -3 iacta | tail -1
