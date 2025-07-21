@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+echo "Please kill the '4-to_infinity_and_beyond' process manually."
