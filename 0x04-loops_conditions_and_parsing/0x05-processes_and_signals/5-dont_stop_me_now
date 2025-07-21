@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Find the PID(s) of the running '4-to_infinity_and_beyond' script (excluding the grep process)
+pids=$(pgrep -f 4-to_infinity_and_beyond)
+
+# Kill each PID found
+for pid in $pids; do
+    kill "$pid"
+done
