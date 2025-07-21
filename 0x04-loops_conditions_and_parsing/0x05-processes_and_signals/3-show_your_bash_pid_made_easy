@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+for pid_dir in /proc/[0-9]*; do
+    pid=$(basename "$pid_dir")
+    if [[ -r "$pid_dir/comm" ]]; then
+        name=$(cat "$pid_dir/comm")
+        if [[ "$name" == *bash* ]]; then
+            echo "$pid $name"
+        fi
+    fi
+done
